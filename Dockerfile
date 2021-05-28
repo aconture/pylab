@@ -1,6 +1,7 @@
 FROM python:3.9.5
 
 RUN useradd -ms /bin/bash -u 1000 pylab
+COPY config/.bashrc /home/pylab
 
 #necesario para mantener el docker corriendo:
 RUN pip install sphinx==3.3.1 sphinx-autobuild 
