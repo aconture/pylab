@@ -1,0 +1,14 @@
+#version: '2.1'
+version: '3'
+services:
+    python:
+        container_name: python-lab
+        hostname: python-lab
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./apps:/apps:rw
+            #- /mnt/c/Users/Public/Documents/Pytthon-docker/apps:/apps:rw
+#        ports:
+#            - 8000:8000
